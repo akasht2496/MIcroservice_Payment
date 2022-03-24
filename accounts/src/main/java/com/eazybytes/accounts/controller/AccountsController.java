@@ -3,7 +3,13 @@
  */
 package com.eazybytes.accounts.controller;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -36,8 +42,19 @@ public class AccountsController {
 
 	}
 	
-	@GetMapping("/acc")
-	public 
+	@GetMapping(path="/findAll")
+	public ResponseEntity<?> getAll(){
+		List<Accounts> accountNo=(List<Accounts>) accountsRepository.findAll();
+		
+		  List<Long> l1= accountNo.stream().map(e->e.getAccountNumber()).skip(1).limit(2).collect(Collectors.toList());
+	Optional<Accounts> acc=	 accountNo.parallelStream().findAny();
+		return new ResponseEntity<>(l1,HttpStatus.OK);
+		
+		
+	}
+	
+//	@PostMapping(path="/save")
+//	public Account saveAccountDetail(@RequestBody)
 	
 
 }

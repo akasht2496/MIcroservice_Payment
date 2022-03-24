@@ -10,5 +10,6 @@ public interface AccountsRepository extends CrudRepository<Accounts, Long> {
 	
 	
 	Accounts findByCustomerId(int customerId);
+	Iterable<Accounts> findAll();
 
 }

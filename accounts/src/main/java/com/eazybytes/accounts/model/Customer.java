@@ -26,9 +26,8 @@ public class Customer {
 	private String mobileNumber;
 	@Column(name = "create_dt")
 	private LocalDate createDt;
-	public int getCustomerId() {
-		// TODO Auto-generated method stub
-		return 0;
+	
+	
 	}
+	
 
-}

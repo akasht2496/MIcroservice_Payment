@@ -20,6 +20,18 @@ CREATE TABLE `accounts` (
 INSERT INTO `customer` (`name`,`email`,`mobile_number`,`create_dt`)
  VALUES ('Eazy Bytes','tutor@eazybytes.com','9876548337',CURDATE());
  
+ INSERT INTO `customer` (`name`,`email`,`mobile_number`,`create_dt`)
+ VALUES ('akash','akash@eazybytes.com','9876548322',CURDATE());
+ 
+ INSERT INTO `customer` (`name`,`email`,`mobile_number`,`create_dt`)
+ VALUES ('Ashutosh Prakash','ashu.prakash@gmail.com','8697230344',CURDATE());
+ 
 INSERT INTO `accounts` (`customer_id`, `account_number`, `account_type`, `branch_address`, `create_dt`)
  VALUES (1, 186576453, 'Savings', '123 Main Street, New York', CURDATE());
- 
+
+INSERT INTO `accounts` (`customer_id`, `account_number`, `account_type`, `branch_address`, `create_dt`)
+ VALUES (2, 986576454, 'Savings', '123 Main Street, New York', CURDATE());
+
+INSERT INTO `accounts` (`customer_id`, `account_number`, `account_type`, `branch_address`, `create_dt`)
+ VALUES (3, 786522222, 'Current', '321 Street, Boston', CURDATE());
+    
